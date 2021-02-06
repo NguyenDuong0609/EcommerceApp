@@ -1,4 +1,6 @@
 import 'package:ecommerceApp/routes.dart';
+import 'package:ecommerceApp/screens/home/components/categories.dart';
+import 'package:ecommerceApp/screens/productFollowCategory/productFollowCategory.dart';
 import 'package:ecommerceApp/screens/profile/profile_screen.dart';
 import 'package:ecommerceApp/theme.dart';
 import 'package:flutter/material.dart';
