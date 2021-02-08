@@ -1,16 +1,12 @@
 import 'package:ecommerceApp/components/default_button.dart';
-import 'package:ecommerceApp/constants.dart';
-import 'package:ecommerceApp/models/Product.dart';
-import 'package:ecommerceApp/screens/checkout/checkout_screen.dart';
-import 'package:ecommerceApp/size_config.dart';
+import 'package:ecommerceApp/screens/payment/components/payment_success.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerceApp/models/Cart.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:flutter_svg/svg.dart';
+import '../../size_config.dart';
 import 'components/body.dart';
 
-class CartScreen extends StatelessWidget {
-  static String routeName = "/cart";
+class PaymentScreen extends StatelessWidget {
+  static String routeName = "/payment";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,17 +18,17 @@ class CartScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      title: Column(
-        children: [
-          Text(
-            "Your Cart",
-            style: TextStyle(color: Colors.black),
-          ),
-          Text(
-            "${demoCarts.length} items",
-            style: Theme.of(context).textTheme.caption,
-          ),
-        ],
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back_ios),
+      ),
+      title: Text(
+        "Payment",
+        style: TextStyle(
+          color: Colors.black
+        ),
+        textAlign: TextAlign.center,
       ),
     );
   }
@@ -47,8 +43,8 @@ class CheckoutCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        vertical: getProportionateScreenWidth(15),
-        horizontal: getProportionateScreenWidth(30)
+          vertical: getProportionateScreenWidth(15),
+          horizontal: getProportionateScreenWidth(30)
       ),
       //height: 174,
       decoration: BoxDecoration(
@@ -69,25 +65,6 @@ class CheckoutCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(
-              children: [
-                Container(
-                  padding: EdgeInsets.all(10),
-                  height: getProportionateScreenWidth(40),
-                  width: getProportionateScreenWidth(40),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFF5F6F9),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: SvgPicture.asset("assets/icons/receipt.svg"),
-                ),
-                Spacer(),
-                Text("Add voucher code"),
-                const SizedBox(width: 10),
-                Icon(Icons.arrow_forward_ios, size: 12, color: kTextColor),
-              ],
-            ),
-            SizedBox(height: getProportionateScreenHeight(10)),
-            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text.rich(
@@ -104,8 +81,8 @@ class CheckoutCard extends StatelessWidget {
                 SizedBox(
                   width: getProportionateScreenWidth(190),
                   child: DefaultButton(
-                    text: "Checkout Out",
-                    press: () => Navigator.pushNamed(context, CheckoutScreen.routeName),
+                    text: "Pay",
+                    press: () => Navigator.pushNamed(context, PaymentSuccessScreen.routeName),
                   ),
                 ),
               ],

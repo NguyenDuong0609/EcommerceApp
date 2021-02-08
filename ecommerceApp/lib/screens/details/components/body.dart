@@ -1,6 +1,7 @@
 import 'package:ecommerceApp/components/default_button.dart';
 import 'package:ecommerceApp/components/rounded_icon_btn.dart';
 import 'package:ecommerceApp/constants.dart';
+import 'package:ecommerceApp/screens/cart/cart_screen.dart';
 import 'package:ecommerceApp/screens/details/components/product_description.dart';
 import 'package:ecommerceApp/screens/details/components/product_images.dart';
 import 'package:ecommerceApp/screens/details/components/top_rounded_container.dart';
@@ -47,7 +48,7 @@ class Body extends StatelessWidget {
                           ),
                           child: DefaultButton(
                             text: "Add to Cart",
-                            press: () {},
+                            press: () => Navigator.pushNamed(context, CartScreen.routeName),
                           ),
                         ),
                       ),

@@ -1,5 +1,7 @@
 import 'package:ecommerceApp/screens/cart/cart_screen.dart';
 import 'package:ecommerceApp/screens/checkout/checkout_screen.dart';
+import 'package:ecommerceApp/screens/payment/components/payment_success.dart';
+import 'package:ecommerceApp/screens/payment/payment_screen.dart';
 import 'package:ecommerceApp/screens/complete_profile/complete_profile_screen.dart';
 import 'package:ecommerceApp/screens/details/details_screen.dart';
 import 'package:ecommerceApp/screens/forgot_password/forgot_password_screen.dart';
@@ -31,4 +33,6 @@ final Map<String, WidgetBuilder> routes = {
   ProductFollowCategoryScreen.routeName: (context) => ProductFollowCategoryScreen(),
   OrderScreen.routeName: (context) => OrderScreen(),
   CheckoutScreen.routeName: (context) => CheckoutScreen(),
+  PaymentScreen.routeName: (context) => PaymentScreen(),
+  PaymentSuccessScreen.routeName: (context) => PaymentSuccessScreen(),
 };

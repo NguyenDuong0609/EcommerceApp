@@ -1,5 +1,7 @@
 import 'package:ecommerceApp/screens/cart/cart_screen.dart';
 import 'package:ecommerceApp/screens/checkout/checkout_screen.dart';
+import 'package:ecommerceApp/screens/payment/components/payment_success.dart';
+import 'package:ecommerceApp/screens/payment/payment_screen.dart';
 import 'package:ecommerceApp/screens/order/order_screen.dart';
 import 'package:ecommerceApp/screens/productFollowCategory/productFollowCategory.dart';
 import 'package:ecommerceApp/screens/sign_in/sign_in_screen.dart';
